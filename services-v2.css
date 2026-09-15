@@ -71,4 +71,6 @@ body:not(.service-page)>header{position:absolute;top:0;left:0;width:100%;z-index
 body:not(.service-page)>header nav>a:not(.pill){color:var(--ink)}
 body:not(.service-page)>header .pill.dark{box-shadow:0 5px 18px rgba(0,0,0,.16)}
 body:not(.service-page) .hero{margin-top:0;min-height:100svh;height:100svh}
+body:not(.service-page) .hero-copy{padding-top:155px}
 @media(max-width:620px){body:not(.service-page)>header{min-height:92px}}
+@media(max-width:620px){body:not(.service-page) .hero-copy{padding-top:118px}}
