@@ -72,5 +72,11 @@ body:not(.service-page)>header nav>a:not(.pill){color:var(--ink)}
 body:not(.service-page)>header .pill.dark{box-shadow:0 5px 18px rgba(0,0,0,.16)}
 body:not(.service-page) .hero{margin-top:0;min-height:100svh;height:100svh}
 body:not(.service-page) .hero-copy{padding-top:155px}
+.intro{grid-template-columns:.55fr 1.15fr 1fr;align-items:center;gap:48px}
+.intro-copy h2{font-size:clamp(30px,2.6vw,42px);white-space:nowrap}
+.intro-image{margin:0;overflow:hidden;aspect-ratio:1.35;background:var(--soft)}
+.intro-image img{display:block;width:100%;height:100%;object-fit:cover}
 @media(max-width:620px){body:not(.service-page)>header{min-height:92px}}
 @media(max-width:620px){body:not(.service-page) .hero-copy{padding-top:118px}}
+@media(max-width:900px){.intro{grid-template-columns:.45fr 1.25fr;gap:30px}.intro-image{grid-column:2}}
+@media(max-width:620px){.intro{display:block}.intro-copy h2{white-space:normal}.intro-image{margin-top:32px;aspect-ratio:1.5}}
