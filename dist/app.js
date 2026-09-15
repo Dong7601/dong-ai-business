@@ -1,5 +1,8 @@
 const contactEmail = '';
 const form = document.querySelector('#contact-form');
+const serviceNames = {training:'法人向けAI研修',consulting:'AI導入・活用支援',japan:'海外AI企業の日本市場進出支援'};
+const selectedService = serviceNames[new URLSearchParams(location.search).get('service')];
+if (selectedService && form) form.elements.service.value = selectedService;
 document.querySelectorAll('[data-service]').forEach(link => link.addEventListener('click', () => {form.elements.service.value = link.dataset.service;}));
 if (contactEmail) {
   const button = form.querySelector('button');
