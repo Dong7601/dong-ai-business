@@ -1,5 +1,6 @@
 /* Service imagery, editorial detail pages and brand background. */
 .service-grid{gap:28px;border:0;align-items:stretch}
+.service-grid article:nth-child(2){border-left:0!important}
 .service-grid article,.service-grid article:first-child,.service-grid article:last-child{padding:0;border:0;min-width:0}
 .service-card-link{display:flex;flex-direction:column;height:100%;border-bottom:1px solid var(--line)}
 .service-image{position:relative;overflow:hidden;aspect-ratio:1.5;background:var(--soft)}
