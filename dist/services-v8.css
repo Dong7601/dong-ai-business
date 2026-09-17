@@ -126,3 +126,7 @@ body:not(.service-page) .hero-copy{padding-left:max(24px,calc((100vw - 1160px)/2
 }
 /* Homepage copy alignment refinements */
 body:not(.service-page) .intro{grid-template-columns:.35fr 1.35fr 1fr;gap:40px}
+
+/* Keep top navigation legible over the hero image. */
+body:not(.service-page)>header nav{gap:24px;padding:8px 14px;background:rgba(255,255,255,.8);border:1px solid rgba(23,25,23,.08);border-radius:999px;backdrop-filter:blur(8px)}
+@media(max-width:620px){body:not(.service-page)>header nav{display:none}}
