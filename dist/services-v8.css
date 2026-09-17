@@ -132,6 +132,29 @@ body:not(.service-page)>header nav{gap:24px;padding:8px 14px;background:rgba(255
 @media(max-width:620px){body:not(.service-page)>header nav{display:none}}
 
 /* Responsive editorial rhythm: a shared content width and phrase-aware headings. */
+.service-card-copy p.service-fit{color:var(--ink)!important;font-size:14px;font-weight:600!important;margin:0 0 12px}
+.service-card-link:focus-visible{outline:2px solid var(--ink);outline-offset:8px}
+.faq{padding-top:80px;padding-bottom:80px;display:grid;grid-template-columns:1fr 1.6fr;gap:64px;border-bottom:1px solid var(--line)}
+.faq-list details{font-size:16px;margin:0;border-bottom:0}
+.faq-list details:last-child{border-bottom:1px solid var(--line)}
+.faq-list summary{gap:24px;align-items:baseline;padding:22px 0;font-weight:500;line-height:1.8}
+.faq-list summary::after{content:'+';flex-shrink:0;font:22px Arial,sans-serif}
+.faq-list details[open] summary::after{content:'−'}
+.faq-list details p{margin:0 0 24px;color:var(--muted);line-height:2}
+.contact-notice{margin:0 0 24px;border-left:2px solid var(--ink);padding:16px 20px;background:var(--soft);font-size:15px;line-height:1.9}
+#contact-form fieldset{border:0;padding:0;margin:0;min-width:0}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.service-page .detail-heading>p:last-child{position:static;max-width:none;margin:24px 0 0}
+@media(max-width:620px){
+ .faq{display:block;padding-top:56px;padding-bottom:56px}
+ .faq-list{margin-top:28px}
+ .faq-list summary{font-size:16px;gap:14px}
+ .service-page>header{padding:12px 20px;height:92px;gap:12px}
+ .service-page>header .logo{width:70px;flex:0 0 70px;height:54px}
+ .service-page>header nav{gap:12px}
+ .service-page .detail-heading h1{font-size:clamp(28px,7.5vw,38px)}
+ .related-card{grid-template-columns:minmax(0,32%) minmax(0,1fr);gap:16px}
+}
 .wrap{width:100%;max-width:1280px;padding-left:60px;padding-right:60px}
 h2,h3,p,dd,li{line-break:strict;overflow-wrap:break-word}
 h2,h3{text-wrap:balance}

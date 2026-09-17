@@ -4,13 +4,14 @@ const serviceNames = {training:'法人向けAI研修',consulting:'AI導入・活
 const selectedService = serviceNames[new URLSearchParams(location.search).get('service')];
 if (selectedService && form) form.elements.service.value = selectedService;
 document.querySelectorAll('[data-service]').forEach(link => link.addEventListener('click', () => {form.elements.service.value = link.dataset.service;}));
-if (contactEmail) {
+if (contactEmail && form) {
+  form.querySelector('fieldset').disabled = false;
   const button = form.querySelector('button');
   button.disabled = false;
   button.innerHTML = 'メールで相談する <span>↗</span>';
   document.querySelector('#form-note').textContent = '入力内容を引き継いでメールアプリが開きます。内容を確認して送信してください。';
 }
-form.addEventListener('submit', event => {
+form?.addEventListener('submit', event => {
   event.preventDefault();
   if (!contactEmail || !form.reportValidity()) return;
   const data = new FormData(form);
