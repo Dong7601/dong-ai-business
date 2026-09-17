@@ -6,3 +6,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .hero{background-image:url("assets/hero.png");background-position:center;background-size:cover}.hero-words{color:#fff}.hero-bottom{color:#fff}.hero-bottom>span{color:#333}@media(max-width:620px){.hero{background-position:43% center;background-size:auto 100%}.hero-copy{background:linear-gradient(90deg,rgba(255,255,255,.65),rgba(255,255,255,0));padding-bottom:32px}.hero-bottom>span{color:#fff}}
 .intro p:not(.eyebrow),.service-grid p,.approach-row div p,.case-grid p,.bio>p:not(.eyebrow),.contact-intro>p:not(.eyebrow){font-size:16px}.hero-words{text-shadow:0 1px 12px rgba(0,0,0,.45)}
+/* Hero copy and intro alignment refinements */
+.hero-title-mobile{display:none}
+@media(max-width:620px){.hero-title-desktop{display:none}.hero-title-mobile{display:inline}}
