@@ -1,4 +1,8 @@
 /* Service imagery, editorial detail pages and brand background. */
+.detail-jump{display:flex;flex-wrap:wrap;gap:12px 28px;padding-top:0;padding-bottom:28px;font-family:inherit;font-size:14px}
+.detail-jump a{display:inline-flex;align-items:center;min-height:44px;border-bottom:1px solid var(--line)}
+.detail-jump a:hover{border-color:var(--ink)}
+@media(max-width:620px){.detail-jump{gap:8px 18px;padding-bottom:22px}.detail-jump>a:not(.pill){display:inline-flex;font-size:13px}}
 .service-grid{gap:28px;border:0;align-items:stretch}
 .service-grid article:nth-child(2){border-left:0!important}
 .service-grid article,.service-grid article:first-child,.service-grid article:last-child{padding:0;border:0;min-width:0}
@@ -12,7 +16,7 @@
 .service-card-copy p{font-weight:400!important;color:var(--muted)!important;margin-bottom:24px;line-height:1.85}
 .service-more{margin-top:auto;font-size:14px;display:flex;justify-content:space-between;align-items:center;padding-top:12px}
 .image-note{font-size:12px;color:var(--muted);margin:20px 0 0}
-.visual-story{min-height:510px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.84) 30%,rgba(255,255,255,.16) 85%),url('assets/background.png') center/cover;margin:0 20px}
+.visual-story{min-height:510px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.84) 30%,rgba(255,255,255,.16) 85%),url('assets/background.webp') center/cover;margin:0 20px}
 .visual-story .wrap{width:100%;padding-top:75px;padding-bottom:75px}
 .visual-story h2{font-size:42px;line-height:1.65}
 .visual-story p:not(.eyebrow){font-size:16px;margin:28px 0 0}
@@ -64,7 +68,7 @@
 .related-card .eyebrow{font-size:11px}
 @media(max-width:1000px){.service-grid{gap:20px}.service-card-copy h3{font-size:23px}.detail-heading>p:last-child{position:static;margin-top:25px;max-width:none}.detail-heading h1{font-size:52px}.detail-overview,.needs-inner{gap:40px}.focus-inner{gap:40px}.related-card{display:block}.related-card img{aspect-ratio:1.8;margin-bottom:20px}}
 @media(max-width:620px){.service-grid{display:block}.service-grid article+article{margin-top:35px}.service-image{aspect-ratio:1.6}.service-card-copy{padding-top:22px}.service-card-copy h3{font-size:27px;margin-top:15px}.service-card-copy p{font-size:16px}.visual-story{min-height:430px;margin:0 10px;background-position:58% center}.visual-story .wrap{padding:60px 26px}.visual-story h2{font-size:29px}.visual-story .eyebrow{font-size:10px}.breadcrumb{padding-top:15px;padding-bottom:15px;gap:10px;font-size:11px}.breadcrumb>span:last-child{flex-basis:100%}.detail-heading{padding-top:30px;padding-bottom:35px}.detail-heading h1{font-size:38px;line-height:1.5}.detail-heading>p:last-child{font-size:16px;margin-top:20px}.detail-hero{height:300px;margin:0 10px}.detail-hero figcaption{font-size:10px;right:10px;bottom:10px}.detail-overview{display:block;padding-top:60px;padding-bottom:60px}.detail-overview h2{font-size:28px;margin-bottom:25px}.detail-overview .pill{font-size:13px;gap:15px}.needs-section{padding:50px 0}.needs-inner{display:block}.needs-inner ul{margin-top:30px}.needs-inner h2{font-size:28px}.detail-support{padding-top:60px;padding-bottom:60px}.support-grid{display:block;margin-top:30px}.support-grid article+article{margin-top:35px}.support-grid h3{font-size:24px}.scope-note{padding:24px}.detail-focus{padding:50px 0}.focus-inner{display:block}.focus-photo{aspect-ratio:1.5;margin-bottom:30px}.focus-inner h2{font-size:28px}.detail-cta{padding-top:65px;padding-bottom:65px}.detail-cta h2{font-size:27px}.detail-cta .pill{font-size:13px;gap:15px}.related{padding-bottom:60px}.related-grid{display:block;margin-top:25px}.related-card{display:grid;grid-template-columns:36% 1fr;gap:20px}.related-card img{margin:0;aspect-ratio:1.15}.related-card h3{font-size:17px}.related-card+.related-card{border-top:0}}
-.logo{display:inline-block;width:132px;height:72px;background:url('assets/site-logo-symbol-dong-v2.png') center/contain no-repeat;font-size:0!important;letter-spacing:0}
+.logo{display:inline-block;width:132px;height:72px;background:url('assets/site-logo-symbol-dong-v2.webp') center/contain no-repeat;font-size:0!important;letter-spacing:0}
 .logo span{display:none}.bio h2 span{font-size:0}.bio h2 span::after{content:'AI Consultant';font:12px Arial,sans-serif;letter-spacing:1px}
 @media(max-width:620px){.logo{width:108px;height:62px}}
 body:not(.service-page)>header{position:absolute;top:0;left:0;width:100%;z-index:10;background:transparent;min-height:120px}
@@ -144,7 +148,10 @@ body:not(.service-page)>header nav{gap:24px;padding:8px 14px;background:rgba(255
 .contact-notice{margin:0 0 24px;border-left:2px solid var(--ink);padding:16px 20px;background:var(--soft);font-size:15px;line-height:1.9}
 #contact-form fieldset{border:0;padding:0;margin:0;min-width:0}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.service-page .detail-heading>p:last-child{position:static;max-width:none;margin:24px 0 0}
+.service-page .detail-heading{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);column-gap:48px;align-items:end;padding-top:32px;padding-bottom:36px}
+.service-page .detail-heading>.eyebrow{grid-column:1/-1}
+.service-page .detail-heading>p:last-child{position:static;max-width:none;margin:0 0 8px}
+@media(max-width:760px){.service-page .detail-heading{display:block}.service-page .detail-heading>p:last-child{margin:20px 0 0}}
 @media(max-width:620px){
  .faq{display:block;padding-top:56px;padding-bottom:56px}
  .faq-list{margin-top:28px}
